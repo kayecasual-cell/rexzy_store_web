@@ -9,27 +9,17 @@
         .filter-container { margin-bottom: 25px; display: flex; justify-content: center; gap: 10px; }
         .btn-filter { background: #1a2233; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; font-size: 14px; text-transform: uppercase; }
         .btn-filter.active { background: #34b7f1; box-shadow: 0 0 15px #34b7f1; }
-        
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
         .item-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 15px; width: 160px; display: none; transition: 0.3s; position: relative; }
-        
-        /* Label Tipe: RARE / BASIC */
         .label-type { display: block; font-size: 10px; font-weight: bold; margin-bottom: 5px; padding: 3px 8px; border-radius: 5px; text-transform: uppercase; }
         .rare .label-type { background: #f39c12; color: black; }
         .basic .label-type { background: #34495e; color: white; }
-        
-        /* Label Status: Available / Sold Out */
         .status-badge { font-size: 9px; font-weight: bold; margin-bottom: 10px; display: inline-block; padding: 2px 6px; border-radius: 3px; text-transform: uppercase; }
         .status-available { color: #2ecc71; border: 1px solid #2ecc71; }
         .status-sold { color: #e74c3c; border: 1px solid #e74c3c; }
-
         h3 { font-size: 16px; margin: 10px 0; }
         .price { color: #34b7f1; font-weight: bold; margin-bottom: 15px; display: block; }
-        
-        /* Tombol Beli */
         .btn-buy { background: white; color: black; border: none; padding: 8px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; text-decoration: none; display: inline-block; box-sizing: border-box; }
-        
-        /* Gaya jika sudah SOLD OUT */
         .sold-out { opacity: 0.6; grayscale: 100%; pointer-events: none; }
         .sold-out .btn-buy { background: #333; color: #777; cursor: not-allowed; }
     </style>
@@ -37,7 +27,7 @@
 <body>
 
     <h1>REXZY STORE</h1>
-    <p>PENYETOKNYA ID CANTIK</p>
+    <p>PUSAT ID CANTIK</p>
 
     <div class="filter-container">
         <button class="btn-filter active" onclick="filterSelection('all')">SEMUA</button>
@@ -46,40 +36,38 @@
     </div>
 
     <div class="container">
-        <!-- CONTOH STATUS AVAILABLE (Gunakan format ini untuk ID yang masih ada) -->
-        <div class="item-card rare">
-            <span class="label-type">RARE</span>
-            <span class="status-badge status-available">AVAILABLE</span>
-            <h3>15612319999</h3>
-            <span class="price">Rp 50.000</span>
-            <a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015612319999?" class="btn-buy">BELI</a>
-        </div>
+        <!-- RARE ITEMS -->
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15612319999</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015612319999?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15612299990</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015612299990?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15602222111</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015602222111?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15596988888</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015596988888?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15597666669</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015597666669?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15522808888</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015522808888?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15525505555</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015525505555?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15596666686</h3><span class="price">Rp 45.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015596666686?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15536998888</h3><span class="price">Rp 45.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015536998888?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15593997777</h3><span class="price">Rp 45.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015593997777?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15594977777</h3><span class="price">Rp 45.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015594977777?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15523376666</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015523376666?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15531666601</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015531666601?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15535666600</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015535666600?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15596648888</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015596648888?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15596688887</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015596688887?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15597559999</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015597559999?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><span class="status-badge status-available">AVAILABLE</span><h3>15515888851</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015515888851?" class="btn-buy">BELI</a></div>
 
-        <!-- CONTOH STATUS SOLD OUT (Tambahkan class "sold-out" pada item-card) -->
-        <div class="item-card rare sold-out">
-            <span class="label-type">RARE</span>
-            <span class="status-badge status-sold">SOLD OUT</span>
-            <h3>15596988888</h3>
-            <span class="price">TERJUAL</span>
-            <a href="#" class="btn-buy">SOLD</a>
-        </div>
-
-        <!-- STOK LAINNYA (AVAILABLE) -->
-        <div class="item-card rare">
-            <span class="label-type">RARE</span>
-            <span class="status-badge status-available">AVAILABLE</span>
-            <h3>15612299990</h3>
-            <span class="price">Rp 50.000</span>
-            <a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015612299990?" class="btn-buy">BELI</a>
-        </div>
-
-        <div class="item-card basic">
-            <span class="label-type">BASIC</span>
-            <span class="status-badge status-available">AVAILABLE</span>
-            <h3>15524000039</h3>
-            <span class="price">Rp 35.000</span>
-            <a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015524000039?" class="btn-buy">BELI</a>
-        </div>
+        <!-- BASIC ITEMS -->
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15524000039</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015524000039?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15531000097</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015531000097?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15531000056</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015531000056?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15536940000</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015536940000?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15537200009</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015537200009?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15540000770</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015540000770?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15542540000</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015542540000?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15593840000</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015593840000?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15602000051</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015602000051?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15602000059</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015602000059?" class="btn-buy">BELI</a></div>
+        <div class="item-card basic"><span class="label-type">BASIC</span><span class="status-badge status-available">AVAILABLE</span><h3>15602000098</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015602000098?" class="btn-buy">BELI</a></div>
     </div>
 
     <script>
