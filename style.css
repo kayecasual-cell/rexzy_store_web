@@ -1,0 +1,44 @@
+body {
+    background-color: #0f1014;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header h1 { font-size: 1rem; color: #888; margin-top: 30px; letter-spacing: 2px; }
+header h2 { font-size: 2.2rem; margin: 10px 0; font-weight: bold; }
+header p { color: #00d2ff; font-size: 0.7rem; font-weight: bold; letter-spacing: 3px; }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+}
+
+.card {
+    background: #1c1e22;
+    width: 150px;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 4px solid #2ecc71; /* Hijau untuk Basic */
+}
+
+.card.rare { border-top-color: #3498db; } /* Biru untuk Rare */
+
+.tag { font-size: 0.6rem; color: #aaa; display: block; margin-bottom: 10px; }
+h3 { font-size: 1.1rem; margin: 10px 0; }
+.price { color: #f1c40f; font-size: 0.9rem; margin-bottom: 20px; }
+
+.buy-btn {
+    display: block;
+    background: white;
+    color: black;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
