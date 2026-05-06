@@ -7,7 +7,7 @@
     <style>
         body { background-color: #0d1117; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
         .filter-container { margin-bottom: 25px; display: flex; justify-content: center; gap: 10px; }
-        .btn-filter { background: #1a2233; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; font-size: 14px; }
+        .btn-filter { background: #1a2233; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; font-size: 14px; text-transform: uppercase; }
         .btn-filter.active { background: #34b7f1; box-shadow: 0 0 15px #34b7f1; }
         .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
         .item-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 15px; width: 160px; display: none; transition: 0.3s; }
@@ -24,6 +24,7 @@
     <h1>REXZY STORE</h1>
     <p>PENYETOKNYA ID CANTIK</p>
 
+    <!-- Filter Sederhana -->
     <div class="filter-container">
         <button class="btn-filter active" onclick="filterSelection('all')">SEMUA</button>
         <button class="btn-filter" onclick="filterSelection('basic')">BASIC</button>
@@ -31,7 +32,10 @@
     </div>
 
     <div class="container">
-        <!-- RARE ITEMS (40K - 50K) -->
+        <!-- RARE ITEMS -->
+        <div class="item-card rare"><span class="label-type">RARE</span><h3>15612319999</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015612319999?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><h3>15612299990</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015612299990?" class="btn-buy">BELI</a></div>
+        <div class="item-card rare"><span class="label-type">RARE</span><h3>15602222111</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015602222111?" class="btn-buy">BELI</a></div>
         <div class="item-card rare"><span class="label-type">RARE</span><h3>15596988888</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015596988888?" class="btn-buy">BELI</a></div>
         <div class="item-card rare"><span class="label-type">RARE</span><h3>15597666669</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015597666669?" class="btn-buy">BELI</a></div>
         <div class="item-card rare"><span class="label-type">RARE</span><h3>15522808888</h3><span class="price">Rp 50.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015522808888?" class="btn-buy">BELI</a></div>
@@ -48,7 +52,7 @@
         <div class="item-card rare"><span class="label-type">RARE</span><h3>15597559999</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015597559999?" class="btn-buy">BELI</a></div>
         <div class="item-card rare"><span class="label-type">RARE</span><h3>15515888851</h3><span class="price">Rp 40.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015515888851?" class="btn-buy">BELI</a></div>
 
-        <!-- BASIC ITEMS (35K) -->
+        <!-- BASIC ITEMS -->
         <div class="item-card basic"><span class="label-type">BASIC</span><h3>15524000039</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015524000039?" class="btn-buy">BELI</a></div>
         <div class="item-card basic"><span class="label-type">BASIC</span><h3>15531000097</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015531000097?" class="btn-buy">BELI</a></div>
         <div class="item-card basic"><span class="label-type">BASIC</span><h3>15531000056</h3><span class="price">Rp 35.000</span><a href="https://wa.me/62881022715729?text=Assalamualaikum%20apakah%20id%20ini%20masih%20ada%2015531000056?" class="btn-buy">BELI</a></div>
@@ -64,14 +68,19 @@
 
     <script>
         function filterSelection(c) {
-            var x = document.getElementsByClassName("item-card");
+            var x, i;
+            x = document.getElementsByClassName("item-card");
             if (c == "all") c = "";
-            for (var i = 0; i < x.length; i++) {
+            for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
-                if (x[i].className.indexOf(c) > -1) x[i].style.display = "block";
+                if (x[i].className.indexOf(c) > -1) {
+                    x[i].style.display = "block";
+                }
             }
         }
-        var btns = document.getElementsByClassName("btn-filter");
+
+        var btnContainer = document.querySelector(".filter-container");
+        var btns = btnContainer.getElementsByClassName("btn-filter");
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function() {
                 var current = document.getElementsByClassName("active");
@@ -79,6 +88,7 @@
                 this.className += " active";
             });
         }
+        
         filterSelection("all");
     </script>
 </body>
